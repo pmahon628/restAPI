@@ -1,4 +1,8 @@
 # restAPI
 Rest API with Node Express and Mongo.
 
-Basically, I need practice with the back end and this little project is designed to be just that, practice with the backend using the above technologies.
+Simple but important project. I have spent alot time working on front-end projects and because  of that I am certain that my backend skills are lacking.  
+
+This is intented to be a simple REST API utulizing Node, Express, and Mongo. I also used Postman for testing purposes.
+
+Thank you.
