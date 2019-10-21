@@ -21,8 +21,7 @@ app.use((req, res, next) => {
 // handler for 500
 app.use((err, req, res, next) => {
     console.error(err.stack)
-
-    res.sendFile(path.join(__dirname, '../public/500.html'))
+     res.sendFile(path.join(__dirname, '../public/500.html'))
 })
 
 // PORT
