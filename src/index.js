@@ -1,16 +1,20 @@
 let express = require('express')
-
 let app = express()
-
 // ROUTES
+let customerRoute = require('./routes/customer')
 let personRoute = require('./routes/person')
+let path = require('path')
+let bodyParser = require('body-parser')
+
+app.use(bodyParser.json())
 
 app.use((req, res, next) =>{
-    console.log(`${new Date().toString()} => ${req.originalURL}`)
+    console.log(`${new Date().toString()} => ${req.originalURL}`, req.body)
     next()
 })
 
 app.use(personRoute)
+app.use(customerRoute)
 app.use(express.static('public'))
 
 // handler for 404
