@@ -7,10 +7,10 @@ router.post('/customer', (req, res) =>{
     if(!req.body) {
         return res.status(400).send('Request body is missing')
     }
-
-
-
-    // create customer model and save it to DB
+    if(!req.body.email){
+        // ...
+    }
+ // create customer model and save it to DB
     // let user = {
     //     name = 'firstname  lastname'
     //     email = 'email@gmail.com'
@@ -77,6 +77,5 @@ router.delete('/customer', (req, res => {
         res.status(500).json(err)
     })
 })
-
 
 module.exports = router
